@@ -1,8 +1,6 @@
 (function() {
-  // all funcitonality to go here
 
   var submitBtn = document.getElementById("submit-btn");
-  var body = document.querySelector("body");
   var textDiv = document.getElementById("output");
 
 
@@ -32,11 +30,10 @@
     return string;
   }
 
-  function httpGetRequest(colour) {
+  function httpGetRequest() {
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = () => {
       if (xhr.readyState == 4 && xhr.status == 200) {
-        body.style.backgroundColor = colour;
         numberOfEmojis = document.getElementById("input").value;
         var emojiOutput = addEmoji(emojiString);
         textDiv.innerText = emojiOutput;
@@ -47,11 +44,11 @@
   }
 
   submitBtn.addEventListener("click", function() {
-    httpGetRequest("rgb(255, 79, 85)");
+    httpGetRequest();
   });
 
   submitBtn.addEventListener("click", function(event){
     event.preventDefault()
   });
-  
+
 })();
