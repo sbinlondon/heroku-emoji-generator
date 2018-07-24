@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Emoji Generator</title>
+        <link href="public/main.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+      <div class="container">
+        <h1>Emoji Generator!</h1>
+        <form class="input-container">
+          <input type="text" id="input" placeholder="How many emojis want ye?" pattern="[0-9]{1,}" min="1" max="5000" required>
+          <input type="submit" id="submit-btn" value="EMOJI ME">
+        </form>
+        <div class="output-container">
+          <p id="output"></p>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="public/emojis.js"></script>
+    </body>
+
+</html>
