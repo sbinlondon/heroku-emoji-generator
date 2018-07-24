@@ -5,14 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Emoji Generator</title>
         <link href="public/main.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy|Noto+Sans:400,700" rel="stylesheet">
     </head>
 
     <body>
       <div class="container">
         <h1>Emoji Generator!</h1>
         <form class="input-container">
-          <input type="text" id="input" placeholder="How many emojis want ye?" pattern="[0-9]{1,}" min="1" max="5000" required>
-          <input type="submit" id="submit-btn" value="EMOJI ME">
+          <input type="text" id="input" placeholder="How many emojis want ye?" required minlength="1" maxlength="4" pattern="\d+">
+          <input type="submit" id="submit-btn" value="Emoji Me!">
         </form>
         <div class="output-container">
           <p id="output"></p>
