@@ -4,7 +4,7 @@ const router = require('./router');
 
 const server = http.createServer(router);
 
-const port = 8000;
+var port = process.env.PORT || 8000;
 
 server.listen(port);
 
